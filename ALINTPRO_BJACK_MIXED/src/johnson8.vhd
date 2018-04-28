@@ -8,24 +8,24 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
 entity johnson8 is
-    port (
-        CLK: in STD_LOGIC;
-        RESET: in STD_LOGIC;
-        Q: out STD_LOGIC_VECTOR (7 downto 0)
+    port(
+        CLK   : in  STD_LOGIC;
+        RESET : in  STD_LOGIC;
+        Q     : out STD_LOGIC_VECTOR(7 downto 0)
     );
 end entity;
 
 architecture JOHNSON8_ARCH of johnson8 is
 
-    signal Q_I : STD_LOGIC_VECTOR (7 downto 0);
+    signal Q_I : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
-    process (CLK, RESET)
+    process(CLK, RESET)
     begin
-        if RESET='1' then
+        if RESET = '1' then
             -- asynchronous reset
-            Q_I <= ( others => '1');
+            Q_I <= (others => '1');
         elsif rising_edge(CLK) then
             -- shifting bits with inverted feedback
             Q_I <= Q_I(6 downto 0) & not Q_I(7);
