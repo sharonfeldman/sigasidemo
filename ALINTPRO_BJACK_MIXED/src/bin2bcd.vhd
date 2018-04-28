@@ -18,7 +18,7 @@ entity bin2bcd is
     );
 end entity;
 
-
+--architexture
 architecture BIN2BCD_ARCH of bin2bcd is
 begin
 
@@ -41,4 +41,5 @@ begin
         "10" when (BIN < 30) else
         "11";
 
+--todo more
 end architecture;
