@@ -24,7 +24,10 @@ architecture JOHNSON8_ARCH of johnson8 is
 
 begin
 
-    process(CLK, RESET)
+-- process 
+--inputs clk, reset
+--output q_i
+ p_j :   process(CLK, RESET)
     begin
         if RESET = '1' then
             -- asynchronous reset
