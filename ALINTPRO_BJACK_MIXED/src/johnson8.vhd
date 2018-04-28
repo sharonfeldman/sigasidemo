@@ -6,14 +6,17 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
+-- @formatter:off
 
 entity johnson8 is
     port(
-        CLK   : in  STD_LOGIC;
-        RESET : in  STD_LOGIC;
-        Q     : out STD_LOGIC_VECTOR(7 downto 0)
+        CLK     :    in   STD_LOGIC;                                  -- clock
+        RESET :    in   STD_LOGIC;                                  -- reset
+        Q         :    out STD_LOGIC_VECTOR(7 downto 0) -- q
     );
 end entity;
+
+-- @formatter:on
 
 architecture JOHNSON8_ARCH of johnson8 is
 
