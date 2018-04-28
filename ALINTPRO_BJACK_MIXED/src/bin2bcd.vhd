@@ -9,13 +9,15 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
+-- binary to bcd
 entity bin2bcd is
     port (
-        BIN: in STD_LOGIC_VECTOR (4 downto 0);
-        BCD_H: out STD_LOGIC_VECTOR (1 downto 0) ;
-        BCD_L: out STD_LOGIC_VECTOR (3 downto 0)
+        BIN: in STD_LOGIC_VECTOR (4 downto 0);        -- binary input
+        BCD_H: out STD_LOGIC_VECTOR (1 downto 0) ; -- bcd high
+        BCD_L: out STD_LOGIC_VECTOR (3 downto 0)   -- bcd low
     );
 end entity;
+
 
 architecture BIN2BCD_ARCH of bin2bcd is
 begin
