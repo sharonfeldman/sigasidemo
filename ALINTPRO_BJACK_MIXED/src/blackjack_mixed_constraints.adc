@@ -1,0 +1,9 @@
+create_clock -period 10 -name GEN_CLK       [get_ports MIXED_BJACK/GEN_CLK]
+create_clock -period 10 -name SYS_CLK       [get_ports MIXED_BJACK/SYS_CLK]
+create_clock -period 10 -name NEXT_CARD     [get_pins MIXED_BJACK/I6/NEXT_C]
+
+set_clock_groups -asynchronous -group [get_clocks {SYS_CLK NEXT_CARD}]
+set_clock_groups -asynchronous -group [get_clocks {GEN_CLK}]
+
+create_reset -polarity active-high -clock GEN_CLK -name GEN_RES [get_ports MIXED_BJACK/GEN_RES]
+create_reset -polarity active-low  -clock SYS_CLK -name START [get_ports MIXED_BJACK/START]

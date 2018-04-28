@@ -1,0 +1,156 @@
+POLICY /* policy */
+{
+
+    # Used rules
+
+    # Do not overload a wire with too many drivers.
+    USE DO254_NETLIST.1141
+    
+    # Do not have simultaneously active drivers on one signal.
+    USE DO254_NETLIST.1142
+    
+    # Use tri-states to control bidirectional bus mode.
+    USE DO254_NETLIST.1143_a
+    
+    # Only tri-state elements should be connected to the bidirectional buses.
+    USE DO254_NETLIST.1143_b
+    
+    # Do not use gated clocks (FPGA).
+    USE DO254_NETLIST.1211
+    
+    # Isolate gated clocks to a separate clock generator instance.
+    USE DO254_NETLIST.1212_a
+    
+    # Gated clocks can be used only at top level (ASIC).
+    USE DO254_NETLIST.1212_b
+    
+    # Do not use flip-flop output as a clock.
+    USE DO254_NETLIST.1221
+    
+    # Do not connect clocks to anything other than flip-flop clock pins.
+    USE DO254_NETLIST.1222
+    
+    # Do not connect resets to anything other than flip-flop reset pins.
+    USE DO254_NETLIST.1231
+    
+    # Do not use combinatorial logic in reset lines.
+    USE DO254_NETLIST.1232_a
+    
+    # Avoid internally generated resets.
+    USE DO254_NETLIST.1232_b
+    
+    # Place the reset generator instance at the top-level of design hierarchy.
+    USE DO254_NETLIST.1232_c
+    
+    # A flip-flop inference should have one asynchronous control.
+    USE DO254_NETLIST.1242
+    
+    # Do not use the same signal as clock and reset.
+    USE DO254_NETLIST.1243
+    
+    # Do not use a clock signal as a data.
+    USE DO254_NETLIST.1511
+    
+    # Port description order should follow a pattern.
+    USE DO254_NETLIST.2112
+    
+    # Do not connect inout port directly to input/output ports.
+    USE DO254_NETLIST.3411
+    
+    # Do not use combinatorial feedbacks.
+    USE DO254_NETLIST.3511
+    
+    # Avoid latches as much as possible.
+    USE DO254_NETLIST.3621
+    
+    # Use the 'std_logic_1164' standard package whenever it is possible.
+    USE DO254_VHDL.1311
+    
+    # Use the 'numeric_std' package instead of 'std_logic_arith' and 'std_logic_unsigned' packages.
+    USE DO254_VHDL.1312
+    
+    # Use 'std_logic' only for I/O ports.
+    USE DO254_VHDL.1313
+    
+    # Do not use unsafe data types inside architecture.
+    USE DO254_VHDL.1314
+    
+    # Specify range for objects of 'integer' data type.
+    USE DO254_VHDL.1315
+    
+    # Do not use the 'bit' data type.
+    USE DO254_VHDL.1316
+    
+    # Do not use the 'enum_encoding' attribute for enumerations.
+    USE DO254_VHDL.1317
+    
+    # Specify range for interface objects of 'std_logic_vector' data type.
+    USE DO254_VHDL.1318
+    
+    # Use descending range for one-dimensional objects.
+    USE DO254_VHDL.1321
+    
+    # Specify '0' as least significant bit for one-dimensional objects.
+    USE DO254_VHDL.1322
+    
+    # Use simple signals only for non-constant indexing.
+    USE DO254_VHDL.1323
+    
+    # Do not use ordered port connections.
+    USE DO254_VHDL.1411
+    
+    # Match bit widths of relational operator arguments.
+    USE DO254_VHDL.1621
+    
+    # Bit widths of component port and bind signal should match.
+    USE DO254_VHDL.1633
+    
+    # Define all the necessary signals in the sensitivity list.
+    USE DO254_VHDL.1711
+    
+    # Do not define unnecessary objects in the sensitivity list.
+    USE DO254_VHDL.1721
+    
+    # Do not use a signal within the same process statement it was assigned.
+    USE DO254_VHDL.1722
+    
+    # Do not read global signals in a function body.
+    USE DO254_VHDL.1811
+    
+    # Function return value should be defined in all the possible cases.
+    USE DO254_VHDL.1812
+    
+    # A function should return at the end of its body.
+    USE DO254_VHDL.1821
+    
+    # Function should not return in conditional branches.
+    USE DO254_VHDL.1822
+    
+    # Do not describe multiple statements in one line.
+    USE DO254_VHDL.2121_a
+    
+    # Do not describe multiple association elements in one line.
+    USE DO254_VHDL.2121_b
+    
+    # Do not describe multiple declarations per line.
+    USE DO254_VHDL.2121_c
+    
+    # Do not describe same objects using both upper and lower letter case.
+    USE DO254_VHDL.2221
+    
+    # Do not use multiple waveform and optional delay expression in assignments.
+    USE DO254_VHDL.3111
+    
+    # Case statement should always have 'others' choice.
+    USE DO254_VHDL.3212
+    
+    # Do not describe unreachable conditions.
+    USE DO254_VHDL.3221
+    
+    # Do not use 'with select' statement.
+    USE DO254_VHDL.3223
+    
+    # Do not describe multiple independent conditions in the process.
+    USE DO254_VHDL.3611
+
+}

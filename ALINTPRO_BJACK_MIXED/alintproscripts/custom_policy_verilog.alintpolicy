@@ -1,0 +1,141 @@
+POLICY /* policy */
+{
+
+    # Used rules
+    
+    # No duplicated non-blocking signal assignments within the same combinatorial block.
+    USE DO254_VLOG.1121
+    
+    # No duplicated signal assignments within the same sequential block.
+    USE DO254_VLOG.1122
+    
+    # No mixed signal assignments within the same combinational block.
+    USE DO254_VLOG.1131
+    
+    # Use non-blocking assignments in flip-flop inferences.
+    USE DO254_VLOG.1151
+    
+    # Polarity of a reset signal should match the signal edge.
+    USE DO254_VLOG.1241
+    
+    # Use descending range for one-dimensional objects.
+    USE DO254_VLOG.1321
+    
+    # Use '0' as least significant bit for one-dimensional objects.
+    USE DO254_VLOG.1322
+    
+    # Use simple signals only for non-constant indexing.
+    USE DO254_VLOG.1323
+    
+    # An index should not exceed an object range.
+    USE DO254_VLOG.1324
+    
+    # A source of assignment (RHS) should not be wider than destination (LHS).
+    USE DO254_VLOG.1611
+    
+    # A source of assignment (RHS) should not be narrower than destination (LHS).
+    USE DO254_VLOG.1612
+    
+    # Bit widths should match in assignments of 'integer' to 'reg' or 'wire'.
+    USE DO254_VLOG.1613
+    
+    # Do not assign negative values to objects of 'integer' data type.
+    USE DO254_VLOG.1614
+    
+    # Match bit widths of relational operator arguments.
+    USE DO254_VLOG.1621
+    
+    # Bit width of each 'case' item should match a selection expression.
+    USE DO254_VLOG.1622
+    
+    # An argument and corresponding subprogram port bit widths should match.
+    USE DO254_VLOG.1631
+    
+    # Bit width of function return value should match an assignment destination.
+    USE DO254_VLOG.1632
+    
+    # Bit widths of component port and bind signal should match.
+    USE DO254_VLOG.1633
+    
+    # Do not use reduction operators with signals wider than 8 bits.
+    USE DO254_VLOG.1641
+    
+    # Bit width of target should match operands of bit-wise operation in assignment source.
+    USE DO254_VLOG.1642
+    
+    # Define all necessary signals in the sensitivity list of a combinatorial process.
+    USE DO254_VLOG.1711
+    
+    # Do not define unnecessary objects in the sensitivity list of a combinatorial process.
+    USE DO254_VLOG.1721_a
+    
+    # Do not define constants in the sensitivity list of a combinatorial process.
+    USE DO254_VLOG.1721_b
+    
+    # Sensitivity list should not include signals that are assigned within the process.
+    USE DO254_VLOG.1722
+    
+    # Do not read global signals in a function body.
+    USE DO254_VLOG.1811
+    
+    # Function output should be defined in all the possible cases.
+    USE DO254_VLOG.1812
+    
+    # Do not assign global signals in a function body.
+    USE DO254_VLOG.1813
+    
+    # A function should return at the end of its body.
+    USE DO254_VLOG.1821
+    
+    # Always add comments to object declarations.
+    USE DO254_VLOG.2113_a
+    
+    # Describe one object per declaration.
+    USE DO254_VLOG.2113_b
+    
+    # Declare one object per line.
+    USE DO254_VLOG.2113_c
+    
+    # Do not describe multiple statements in one line.
+    USE DO254_VLOG.2121
+    
+    # Do not use identifiers that differ by letter case only.
+    USE DO254_VLOG.2221
+    
+    # Do not describe case statements with overlapping items.
+    USE DO254_VLOG.3211
+    
+    # Case statement should always have 'default' clause.
+    USE DO254_VLOG.3212
+    
+    # 'default' should be the last clause in case statement.
+    USE DO254_VLOG.3213
+    
+    # Do not use 'casex' and 'casez' statements.
+    USE DO254_VLOG.3214
+    
+    # Do not describe unreachable conditions.
+    USE DO254_VLOG.3221
+    
+    # Use single-bit signals in conditional expressions.
+    USE DO254_VLOG.3222
+    
+    # Do not describe multiple independent conditions in the process.
+    USE DO254_VLOG.3611
+    
+    # Do not use different clock edges within the same process.
+    USE DO254_VLOG.3711_a
+    
+    # Do not use different edges for clocks within the same event control statement.
+    USE DO254_VLOG.3711_b
+    
+    # Do not use identical clock edges within a single 'always' construct.
+    USE DO254_VLOG.3712_a
+    
+    # Specify the event control description at the top of the 'always' construct.
+    USE DO254_VLOG.3712_b
+    
+    # Do not use multiple event controls within a process.
+    USE DO254_VLOG.3721
+
+}
