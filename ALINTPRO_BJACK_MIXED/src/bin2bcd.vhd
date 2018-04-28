@@ -20,6 +20,7 @@ end entity;
 architecture BIN2BCD_ARCH of bin2bcd is
 begin
 
+-- translate bin to bcd low
     with BIN select
         BCD_L <=    "0001" when "00001" | "01011" | "10101" | "11111",
         "0010" when "00010" | "01100" | "10110",
@@ -32,6 +33,7 @@ begin
         "1001" when "01001" | "10011" | "11101",
         "0000" when others;
 
+-- translate bin to bcd high
     BCD_H <=    "00" when (BIN < 10) else
         "01" when (BIN < 20) else
         "10" when (BIN < 30) else
